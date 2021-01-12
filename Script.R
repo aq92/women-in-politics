@@ -3,12 +3,23 @@ WS <- load("~/Downloads/Winners_Losers_Analysis_ES.RData")
 CSES <- cses_imd
 CSES$Country_year <- CSES$IMD1004
 
-
+WS$year <- NA
 WS$partyid <- NA
+WS$seatshare <- NA 
+WS$gendereq <- NA
+
 WS$partyid[WS$Country_year == "ALB_2005"] <- 190
+WS$year[WS$Country_year == "ALB_2005"] <- 2005
+
 WS$partyid[WS$Country_year == "AUS_1996"] <- 424
+WS$year[WS$Country_year == "AUS_1996"] <- 1996
+
 WS$partyid[WS$Country_year == "AUS_2004"] <- 486
+WS$year[WS$Country_year == "AUS_2004"] <- 2004
+
 WS$partyid[WS$Country_year == "AUS_2007"] <- 424
+WS$year[WS$Country_year == "AUS_2007"] <- 2007
+
 WS$partyid[WS$Country_year == "AUS_2013"] <- 486
 WS$partyid[WS$Country_year == "AUT_2008"] <- 1384
 WS$partyid[WS$Country_year == "AUT_2013"] <- 1384
@@ -158,8 +169,21 @@ WS$partyid[WS$Country_year == "ZAF_2014"] <- 1219
 print(CSES$IMD1011_1[CSES$Country_year == "TWN_2008"])
 
 
+#Seperate Year for CSES Data 
+out <- strsplit(as.character(WS$Country_year),'_') 
+do.call(rbind, out)
+data1 <- data.frame(WS$Country_year, do.call(rbind, out))
+data1$country_year <- data1$WS.Country_year
+data1$year <- data1$X2
+
+total <- merge(data WS,data data1,by="country_year")
+
+WS$year <- strsplit(as.character(WS$Country_year),'_')
 
 
+#Merge
+VP$partyid <- VP$v2paid
+merged <- merge(WS,VP, all.x = TRUE)
 
 
 
