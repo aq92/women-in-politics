@@ -170,18 +170,29 @@ print(CSES$IMD1011_1[CSES$Country_year == "TWN_2008"])
 
 
 #Seperate Year for CSES Data 
-out <- strsplit(as.character(WS$Country_year),'_') 
-do.call(rbind, out)
-data1 <- data.frame(WS$Country_year, do.call(rbind, out))
-data1$country_year <- data1$WS.Country_year
-data1$year <- data1$X2
 
-total <- merge(data WS,data data1,by="country_year")
+library(reshape2)
+before = data.frame(attr = c(1,30,4,6), type=c('foo_and_bar','foo_and_bar_2'))
 
-WS$year <- strsplit(as.character(WS$Country_year),'_')
+newColNames <- c("type1", "type2")
+newCols <- colsplit(WS$Country_year, "_", newColNames)
+after2 <- cbind(WS, newCols)
+after2$co <- NULL
+
+after2$year <- NA
+after2$year <- after2$type2
+after2$country_text_id <- NA
+after2$country_text_id <- after2$type1
+
+
+VP$partyid <- NA
+VP$partyid <- VP$v2paid
 
 
 #Merge
+total2 <- merge(after2, VP, by=c("year","partyid"))
+
+
 VP$partyid <- VP$v2paid
 merged <- merge(WS,VP, all.x = TRUE)
 
