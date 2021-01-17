@@ -874,6 +874,156 @@ cses_imd$partyid[cses_imd$IMD3005_3 == 4400019] <- NA #LPKTS
 cses_imd$partyid[cses_imd$IMD3005_3 == 4400020] <- NA #Freedom
 cses_imd$partyid[cses_imd$IMD3005_3 == 4400021] <- 347 #Tpp
 
+#Mexico
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840001] <- 1474 #PRI
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840002] <- 696 #PAN
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840003] <- 216 #PRD
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840004] <- 1241 #PT
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840005] <- 446 #PVEM
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840006] <- NA #PNA
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840007] <- 1331 #MC
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840008] <- NA #PSD
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840010] <- 6110 #MORENA
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840011] <- NA #Possible
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840012] <- 6113 #PES
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840013] <- NA #PARM
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840014] <- NA #PAS
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840015] <- NA #PCD
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840016] <- NA #PFCRN
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840017] <- NA #FC
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840022] <- 93415 #Alliance for Change
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840023] <- 1988 #Alliance Mexico
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840024] <- NA #PDM
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840025] <- NA #PH
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840026] <- NA #PLM
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840027] <- NA #PPS
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840028] <- 93416 #PRD-PT
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840029] <- NA #PRI-PVEM
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840030] <- NA #PSN
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840031] <- NA #SD
+cses_imd$partyid[cses_imd$IMD3005_3 == 4840032] <- NA #Possible
+
+#Motenegro
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990001] <- 3162 #DPS
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990002] <- 3252 #NSD
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990003] <- 3104 #SNP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990004] <- 3185 #SDP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990006] <- 4767 #PCG
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990007] <- 3253 #HGI
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990008] <- 4766 #PZP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990009] <- 3255 #BS
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990011] <- 3163 #European 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990012] <- 6087 #DF 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990013] <- 5469 #DCG 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990014] <- NA #DUA 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990021] <- NA #LPDC 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990022] <- NA #JKP 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990023] <- NA #DP 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990024] <- NA #MC 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990025] <- 5486 #SNS 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990026] <- 5468 #GP URA 
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990027] <- 5468 #SL
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990030] <- NA #RP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990031] <- NA #YAA
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990032] <- NA #AK
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990033] <- NA #DSCG-AA
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990034] <- NA #AKP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990035] <- NA #Nk
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990036] <- NA #Pension
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990037] <- NA #SS
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990038] <- NA #FORCA
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990039] <- NA #FZJ-FPB
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990040] <- NA #BMT
+cses_imd$partyid[cses_imd$IMD3005_3 == 4990041] <- 4768 #LP
+
+#Netherlands
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280001] <- 1157 #CDA
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280002] <- 1234 #PvdA
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280003] <- 828 #VVD
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280004] <- 45 #D66
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280005] <- 1537 #GL
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280006] <- 1363 #SP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280007] <- NA #SGP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280008] <- NA #CU
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280009] <- 298 #PVV
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280010] <- NA #PVN
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280011] <- NA #TON
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280012] <- NA #EenNL
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280013] <- NA #PvdD
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280014] <- 1528 #LPF
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280015] <- NA #LC
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280016] <- NA #LN
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280017] <- NA #VSP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280019] <- 163 #ARP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280020] <- NA #Bp
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280021] <- NA #CD
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280022] <- NA #CP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280023] <- 459 #CPN
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280024] <- 921 #DS70
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280025] <- NA #EVP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280026] <- NA #GPV
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280027] <- NA #Groen
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280028] <- 1390 #KVP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280029] <- NA #NCPN
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280030] <- NA #NLP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280031] <- NA #NMP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280032] <- NA #PPR
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280033] <- NA #PSB
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280034] <- NA #PvdT
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280035] <- NA #RPF
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280036] <- NA #RVP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280037] <- 1894 #SDAP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280038] <- NA #VIP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5280039] <- NA #VIP-Oud
+
+#New Zealand
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540001] <- 1824 #NP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540002] <- 1049 #Lab
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540003] <- 591 #NZF
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540004] <- 752 #ACT
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540005] <- 1099 #GP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540006] <- 940 #UFNZ
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540007] <- NA #CP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540008] <- NA #MP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540009] <- 716 #ALL
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540010] <- NA #IP-Mana
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540011] <- NA #MANA
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540012] <- NA #PP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540013] <- NA #FNZ
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540014] <- NA #CHP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540015] <- NA #UNZ
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540016] <- NA #NZC
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540017] <- NA #One
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540018] <- NA #NZPP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540019] <- NA #Libert
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540020] <- 2095 #Liberal
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540021] <- NA #PG
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540022] <- NA #NZWP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540023] <- NA #MMouri
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540024] <- NA #MMotuhake
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540025] <- NA #Libert
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540026] <- NA #Kiwi
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540027] <- NA #Blokes
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540028] <- 2041 #DP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540029] <- NA #FP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540030] <- NA #GS
+cses_imd$partyid[cses_imd$IMD3005_3 == 5540031] <- NA #PP
+
+#Norway
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780001] <- 448 #Ap
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780002] <- 503 #H
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780003] <- 101 #FrP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780004] <- 719 #SV
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780005] <- NA #MDG
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780006] <- 1072 #SP
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780007] <- 705 #KrF
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780008] <- 1173 #V
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780009] <- NA #R
+cses_imd$partyid[cses_imd$IMD3005_3 == 5780010] <- NA #RV
+
+#Peru
+
+
 
 
 
