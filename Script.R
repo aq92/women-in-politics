@@ -1321,7 +1321,67 @@ cses_imd$partyid[cses_imd$IMD3005_3 == 7100020] <- 5731 #NNP
 cses_imd$partyid[cses_imd$IMD3005_3 == 7100021] <- NA #APO
 
 #South Korea
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100001] <- 7655 #NFP now LKP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100002] <- 2036 #LFP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100003] <- NA #NPP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100004] <- 6561 #DUP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100005] <- 2543 #UPP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100006] <- 894 #UPP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100007] <- NA #Pro-Park
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100010] <- 2548 #MDP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100011] <- 2545 #ULD
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100012] <-  NA #DPP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100015] <-  2546 #DLP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100016] <-  NA #CKP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100017] <-  NA #RKP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100018] <-  2547 #CKP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100019] <-  NA #KYPP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100020] <-  NA #NI21
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100021] <-  2452 #Our
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100022] <-  NA #CP
+cses_imd$partyid[cses_imd$IMD3005_3 == 4100023] <-  NA #NKPH
 
+#Spain
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240001] <-  1338 #PSOE
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240002] <-  441 #PP
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240003] <-  139 #CiU
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240004] <-  247 #IU
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240005] <-  NA #EAJ
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240006] <-  3203 #Pod
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240007] <-  3217 #Pod
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240008] <-  NA #BNG
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240009] <-  848 #ERC
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240010] <-  NA #BS
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240012] <-  NA #UPyD
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240013] <-  NA #CC
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240014] <-  NA #CC-PNC
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240015] <-  NA #CCI
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240016] <-  NA #PNC
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240017] <-  NA #LVE
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240025] <-  NA #PAS
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240026] <-  NA #PAR
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240028] <-  NA #UH
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240029] <-  NA #PRC
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240030] <-  NA #PR
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240031] <-  NA #URAS
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240032] <-  NA #UV
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240033] <-  NA #UV
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240034] <-  NA #UV
+cses_imd$partyid[cses_imd$IMD3005_3 == 7240046] <-  1248 #UV
+
+#Sweden
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520001] <- 487 #SAP
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520002] <- 690 #M
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520003] <- 1274 #FP
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520004] <- 651 #KD
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520005] <- 456 #MP
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520006] <- 199 #C
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520007] <- 830 #V
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520008] <- 409 #SD
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520009] <- NA #Fi
+cses_imd$partyid[cses_imd$IMD3005_3 == 7520010] <- NA #JI
+
+#Swiss
 
 
 
