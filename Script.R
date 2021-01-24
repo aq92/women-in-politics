@@ -1467,8 +1467,39 @@ cses_imd$partyid[cses_imd$IMD3005_3 == 8400004] <- 6866 #PNI
 cses_imd$partyid[cses_imd$IMD3005_3 == 8400005] <- NA #Popular
 cses_imd$partyid[cses_imd$IMD3005_3 == 8400006] <- 4507 #UCU
 
+#Merge datasets based on party ID
+
+merged <- merge(WS,VP, all.x = TRUE)
+
+merged2 <- merge(cses_imd,VP, all.x = TRUE)
+
+#Variables for anaylsis
+
+#The dependent variable used by Williams et al. is statisfaction with democracy
+
+merged2$Satisfaction <- NA
+merged2$Satisfaction[merged2$IMD3010 == 1] <- 4
+merged2$Satisfaction[merged2$IMD3010 == 2] <- 3
+merged2$Satisfaction[merged2$IMD3010 == 4] <- 2
+merged2$Satisfaction[merged2$IMD3010 == 5] <- 1
+
+#My Indendepent Variable is Party Affliation. Williams et al. used vote choice of exec. 
+
+#First: Seperate non-partisans from partisans. 
+merged2$Partisan <- NA
+
+merged2$Partisan[merged2$IMD3005_1 == 0] <- 0
+merged2$Partisan[merged2$IMD3005_1 == 1] <- 1
+
+#Winner is person that affliated with party that won. Baseline is other partisans. 
+
+merged2$Winner_Party_ID <- NA
 
 
+#Loser is person that affliates with party that lost. Baseline is winner partisans. 
+merged2$Winner 
+
+#Non-partisans Binary
 
 
 
