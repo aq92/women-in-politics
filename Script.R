@@ -1,7 +1,9 @@
 VP <- readRDS("~/Downloads/CPD_V-Party_R_v1/V-Dem-CPD-Party-V1.rds")
 WS <- load("~/Downloads/Winners_Losers_Analysis_ES.RData")
-CSES <- cses_imd
-CSES$Country_year <- CSES$IMD1004
+#cses_imd <- load("/Users/ahmad/Downloads/cses_imd.rdata")
+WS <- table
+
+cses_imd$Country_year <- cses_imd$IMD1004
 
 WS$year <- NA
 WS$partyid <- NA
@@ -166,8 +168,6 @@ WS$partyid[WS$Country_year == "USA_2012"] <- 432
 WS$partyid[WS$Country_year == "ZAF_2009"] <- 1219
 WS$partyid[WS$Country_year == "ZAF_2014"] <- 1219
 
-print(CSES$IMD1011_1[CSES$Country_year == "TWN_2008"])
-
 
 #Seperate Year for CSES Data 
 
@@ -178,6 +178,18 @@ newColNames <- c("type1", "type2")
 newCols <- colsplit(WS$Country_year, "_", newColNames)
 after2 <- cbind(WS, newCols)
 after2$co <- NULL
+
+after2$type1[after2$Country_year == "BELF1999"] <- "BEL"
+after2$type2[after2$Country_year == "BELF1999"] <- 1999
+
+after2$type1[after2$Country_year == "BELW1999"] <- "BEL"
+after2$type2[after2$Country_year == "BELW1999"] <- 1999
+
+after2$type1[after2$Country_year == "DEU12002"] <- "DEU"
+after2$type2[after2$Country_year == "DEU12002"] <- 2002
+
+after2$type1[after2$Country_year == "DEU22002"] <- "DEU"
+after2$type2[after2$Country_year == "DEU22002"] <- 2002
 
 after2$year <- NA
 after2$year <- after2$type2
@@ -1471,6 +1483,19 @@ cses_imd$partyid[cses_imd$IMD3005_3 == 8400006] <- 4507 #UCU
 
 merged <- merge(WS,VP, all.x = TRUE)
 
+#Keep the variables need from the cses_imd because vector memory exhausted. HERE
+
+IMD1006_NAM, IMD1004, IMD3010, Votedexec, Votedgov, Female, Education, age, income, IMD3005_1 
+
+cses_imd$IMD1006_NAM
+library(data.table)
+keeplist <- names(cses_imd) %in% c("IMD1004", "IMD1006_NAM", "IMD3010", "IMD3005_3",
+                           "Quota", "Polity_score", "HOG_combine", "IMD3005_1") 
+cses_imd2 <- cses_imd[keeplist]
+
+
+
+
 merged2 <- merge(cses_imd,VP, all.x = TRUE)
 
 #Variables for anaylsis
@@ -1494,10 +1519,72 @@ merged2$Partisan[merged2$IMD3005_1 == 1] <- 1
 #Winner is person that affliated with party that won. Baseline is other partisans. 
 
 merged2$Winner_Party_ID <- NA
+merged2$Country_year <- merged2$IMD1004
+merged2$Winner_Party_ID[merged2$Country_year == WS$Country_year] <- WS$partyid
+#Error 
+
+#Subset that merge 
+library(data.table)
+myvars <- names(WS) %in% c("Country_year", "Legis_women", "GDP_capita_logged", "partyid",
+                           "Quota", "Polity_score", "HOG_combine", "year2") 
+TEST <- WS[myvars]
+
+
+library(dplyr)
+TEST = TEST  %>% group_by(Country_year) %>%
+  summarise(Legis_women = max(Legis_women, na.rm = T),
+            GDP_capita_logged = max(GDP_capita_logged, na.rm = T),
+            partyid = max(partyid, na.rm = T),
+            Quota = max(Quota, na.rm = T),
+            Polity_score = max(Polity_score, na.rm = T),
+            HOG_combine = max(HOG_combine, na.rm = T))
+
+
+library(reshape2)
+
+newColNames <- c("type1", "type2")
+newCols <- colsplit(TEST$Country_year, "_", newColNames)
+TEST2 <- cbind(TEST, newCols)
+
+TEST2$type1[TEST2$Country_year == "BELF1999"] <- "BEL"
+TEST2$type2[TEST2$Country_year == "BELF1999"] <- 1999
+
+TEST2$type1[TEST2$Country_year == "BELW1999"] <- "BEL"
+TEST2$type2[TEST2$Country_year == "BELW1999"] <- 1999
+
+TEST2$type1[TEST2$Country_year == "DEU12002"] <- "DEU"
+TEST2$type2[TEST2$Country_year == "DEU12002"] <- 2002
+
+TEST2$type1[TEST2$Country_year == "DEU22002"] <- "DEU"
+TEST2$type2[TEST2$Country_year == "DEU22002"] <- 2002
+
+
+TEST2$co <- NULL
+
+TEST2$year <- NA
+TEST2$year <- TEST2$type2
+TEST2$country_text_id <- NA
+TEST2$country_text_id <- TEST2$type1
+
+#Merge
+TEST3 <- merge(TEST2, VP, by=c("year","partyid"))
+
+myvars2 <- c("Country_year", "Legis_women", "GDP_capita_logged", "partyid",
+             "Quota", "Polity_score", "HOG_combine", "year", "v2pagender", "v2pawomlab", "v2paseatshare")
+TEST4 <- TEST3[myvars2]
+
+TEST4$Women_win_party <- TEST4$v2pagender
+TEST4$Women_win_labor <- TEST4$v2pawomlab
+TEST4$Women_win_seats <- TEST4$v2paseatshare
+TEST4$winpartyid <- TEST4$partyid
+
+TEST5 <- merge(TEST4, merged2, by=c("Country_year"))
+
 
 
 #Loser is person that affliates with party that lost. Baseline is winner partisans. 
 merged2$Winner 
+WS$year2
 
 #Non-partisans Binary
 
