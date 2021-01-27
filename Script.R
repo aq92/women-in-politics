@@ -2,6 +2,7 @@ VP <- readRDS("~/Downloads/CPD_V-Party_R_v1/V-Dem-CPD-Party-V1.rds")
 WS <- load("~/Downloads/Winners_Losers_Analysis_ES.RData")
 #cses_imd <- load("/Users/ahmad/Downloads/cses_imd.rdata")
 WS <- table
+rm(table)
 
 cses_imd$Country_year <- cses_imd$IMD1004
 
@@ -1481,22 +1482,27 @@ cses_imd$partyid[cses_imd$IMD3005_3 == 8400006] <- 4507 #UCU
 
 #Merge datasets based on party ID
 
-merged <- merge(WS,VP, all.x = TRUE)
+#merged <- merge(WS,VP, all.x = TRUE)
 
 #Keep the variables need from the cses_imd because vector memory exhausted. HERE
 
-IMD1006_NAM, IMD1004, IMD3010, Votedexec, Votedgov, Female, Education, age, income, IMD3005_1 
+#IMD1006_NAM, IMD1004, IMD3010, IMD5008_, IMD5009_, IMD3002, IMD3004, Votedexec, Votedgov, IMD2002, IMD2003, IMD2001_1, IMD2006, IMD3005_1 
 
-cses_imd$IMD1006_NAM
 library(data.table)
 keeplist <- names(cses_imd) %in% c("IMD1004", "IMD1006_NAM", "IMD3010", "IMD3005_3",
-                           "Quota", "Polity_score", "HOG_combine", "IMD3005_1") 
-cses_imd2 <- cses_imd[keeplist]
+                                   "IMD1006_NAM", "IMD1004", "IMD5008_", "IMD5009_", "IMD3002", "IMD3004", 
+                                   "IMD2002", "IMD2003", "IMD2001_1", "IMD2006", "IMD3005_1") 
+cses_imd <- cses_imd[keeplist]
+
+keeplist2 <- names(VP) %in% c("v2pagender", "v2pawomlab", "v2paseatshare", "v2paenname",
+                                   "v2paid", "partyid", "IMD5008_", "IMD5009_", "IMD3002", "IMD3004", 
+                                   "IMD2002", "IMD2003", "IMD2001_1", "IMD2006", "IMD3005_1") 
+VP <- VP[keeplist2]
 
 
 
-
-merged2 <- merge(cses_imd,VP, all.x = TRUE)
+VP$partyid 
+merged <- merge(cses_imd,VP, all.x = TRUE)
 
 #Variables for anaylsis
 
