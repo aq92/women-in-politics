@@ -1542,7 +1542,7 @@ load("/Users/ahmad/Downloads/cses_imd.rdata")
     
     #Step 1: Begin by merging based on party won (country-level). 
     
-    cses_imd <- merge(cses_imd, VP, by=c("partywon","year", all = TRUE))
+    cses_imd <- merge(cses_imd, VP, by=c("partywon","year"))
     
       #rename the variable to identify that values correspond to the party that won. 
       cses_imd$Winner_WomenLabor <- cses_imd$v2pawomlab 
@@ -1556,7 +1556,7 @@ load("/Users/ahmad/Downloads/cses_imd.rdata")
       VP$partyid <- VP$partywon
       VP = subset(VP, select = -c(partywon))
       
-      cses_imd <- merge(cses_imd, VP, by=c("partyid","year", all = TRUE))
+      cses_imd <- merge(cses_imd, VP, by=c("partyid","year"),all.x = TRUE)
       cses_imd$Your_WomenLabor <- cses_imd$v2pawomlab 
       cses_imd$Your_GenderEqu <- cses_imd$v2pagender
       cses_imd$Your_totalseats <- cses_imd$v2patotalseat
