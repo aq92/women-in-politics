@@ -1567,4 +1567,38 @@ load("/Users/ahmad/Downloads/cses_imd.rdata")
       #remove V-party data
       remove(VP)
       
+      
+#Data will be exported to stata. To run same models ran by Williams et al. 
+      
+      #As paper suggests. First model will include be about winners. Baseline is non-partisans and losers. 
+      #Second model will be losers. Baseline is winners and non partisans. 
+      #Third models will be for non-partisans. Baseline partisans. 
+      
+      #For the first model. 
+      
+          #DV: Satisfaction with Democracy
+          #IV : Winner X Female X Women in Leadership of Winning Party 
+          #Controls: Education, Age, Income, Polity, GDP log, Quota, Women in legislature, Winning Party's seat share, and Position on Labor Force Participation.
+          #Levels: election-level, winner, female. 
+      
+      #Loser models. Baseline is winners. 
+      
+          #DV: Satisfaction with Democracy
+          #IV : Loser X Female X Women in Leadership of Winning Party
+          #Controls: Education, Age, Income, Polity, GDP log, Quota, Women in legislature, Winning Party's seat share, and Position on Labor Force Participation.
+          #Levels: election-level, winner, female. 
+      
+      #Non-Partisans:
+      
+          #DV: Satisfaction with Democracy
+          #IV : Loser X Female X Women in Leadership of Winning Party
+          #Controls: Education, Age, Income, Polity, GDP log, Quota, Women in legislature, Winning Party's seat share, and Position on Labor Force Participation.
+          #Levels: election-level, female. 
+      
+      #Model used by Williams et al. 2020 
+      
+      # meologit Satisfaction i.HOG_combine##i.votedEXEC##i.Female Education Age Income Polity_score GDP_capita_logged i.Quota || Country_year:votedEXEC Female
+      library(foreign)
+      write.dta(cses_imd, "cses_imd.dta")
+      
     
